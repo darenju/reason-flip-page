@@ -20,7 +20,7 @@ type props = {
   "onStartPageChange": Js.undefined(unit),
   "onStartSwiping": Js.undefined(unit),
   "onStopSwiping": Js.undefined(unit),
-  "orientation": Js.undefined(string),
+  "orientation": string,
   "pageBackground": Js.undefined(string),
   "perspective": Js.undefined(string),
   "responsive": bool,
@@ -40,6 +40,16 @@ let boolFromOpt = x =>
   switch (x) {
   | None => false
   | Some(x) => x
+  };
+
+let orientationFromOpt = orientation =>
+  switch (orientation) {
+  | None => "vertical"
+  | Some(x) =>
+    switch (x) {
+    | "horizontal" => "horizontal"
+    | _ => "vertical"
+    }
   };
 
 let make =
@@ -93,7 +103,7 @@ let make =
       "onStartPageChange": onStartPageChange |> Js.Undefined.fromOption,
       "onStartSwiping": onStartSwiping |> Js.Undefined.fromOption,
       "onStopSwiping": onStopSwiping |> Js.Undefined.fromOption,
-      "orientation": orientation |> Js.Undefined.fromOption,
+      "orientation": orientation |> orientationFromOpt,
       "pageBackground": pageBackground |> Js.Undefined.fromOption,
       "perspective": perspective |> Js.Undefined.fromOption,
       "responsive": responsive |> boolFromOpt,

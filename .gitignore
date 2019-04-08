@@ -5,6 +5,7 @@ Thumbs.db
 
 # BuckleScript
 lib
+*.js
 .merlin
 
 # Node
