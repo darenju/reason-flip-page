@@ -5,6 +5,10 @@
   "sources": [
     "src"
   ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
   "bs-dependencies": [
     "reason-react"
   ],
