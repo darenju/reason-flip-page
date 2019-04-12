@@ -20,16 +20,16 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^4.0.0",
+    "bs-platform": "^5.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-flip-page": "^1.5.7",
-    "reason-react": "^0.6.0"
+    "reason-react": "^0.7.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-flip-page": "^1.5.7",
-    "reason-react": "^0.5.0"
+    "reason-react": "^0.7.0"
   }
 }

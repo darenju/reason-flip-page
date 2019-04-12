@@ -2,6 +2,8 @@
 
 Reason bindings to react-flip-page.
 
+> Please note: If you are using `reason-react@0.6.x`, please use version `0.1.0` of this package, this version being made for `reason-react@0.7.x`.
+
 # Installation
 
 ```
@@ -37,6 +39,10 @@ let make = _ => {
   }
 };
 ```
+
+# TODO
+
+- Make the callbacks work.
 
 # Thanks
 
